@@ -10,12 +10,12 @@ import { Sticker, Categories, StickerTypes } from "wa-sticker-formatter";
 export default class Command extends BaseCommand {
   constructor(client: WAClient, handler: MessageHandler) {
     super(client, handler, {
-      command: "everyone",
+      command: "d-everyone",
       description: "Tags all group members in chat",
-      aliases: ["all", "tagall", "ping"],
-      category: "moderation",
-      usage: `${client.config.prefix}everyone`,
-      adminOnly: true,
+      aliases: ["d-all", "d-tagall", "d-ping"],
+      category: "dev",
+      usage: `${client.config.prefix}d-everyone`,
+      modsOnly: true,
       baseXp: 20,
     });
   }
