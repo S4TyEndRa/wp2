@@ -6,12 +6,12 @@ import { ISimplifiedMessage } from '../../typings'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'delete',
+            command: 'd-delete',
             description: 'Deletes the quoted Message',
-            aliases: ['del'],
-            category: 'moderation',
-            usage: `${client.config.prefix}delete`,
-            adminOnly: true
+            aliases: ['d-del'],
+            category: 'dev',
+            usage: `${client.config.prefix}d-delete`,
+            modsOnly: true,
         })
     }
 
