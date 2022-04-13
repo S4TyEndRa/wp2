@@ -11,7 +11,7 @@ export default class Command extends BaseCommand {
       aliases: ["d-act"],
       description: "activate certain features on group-chats",
       category: "dev",
-      usage: `${client.config.prefix}activate [events | mod | safe | nsfw | cmd | invitelink]`,
+      usage: `${client.config.prefix}d-activate [events | mod | safe | nsfw | cmd | invitelink]`,
       baseXp: 0,
     });
   }
