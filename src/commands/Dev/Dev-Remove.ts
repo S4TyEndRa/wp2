@@ -6,12 +6,12 @@ import { ISimplifiedMessage } from '../../typings'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            adminOnly: true,
-            aliases: ['boom'],
-            command: 'remove',
+            modsOnly: true,
+            aliases: ['d-boom'],
+            command: 'd-remove',
             description: 'removes the mentioned users',
-            category: 'moderation',
-            usage: `${client.config.prefix}remove [@mention | tag]`,
+            category: 'dev',
+            usage: `${client.config.prefix}d-remove [@mention | tag]`,
             baseXp: 10
         })
     }
