@@ -22,7 +22,7 @@ export default class Command extends BaseCommand {
 	): Promise<void> => {
 		const user = M.sender.jid;
 		const chitoge =
-			"https://telegra.ph/file/7c076009065e15ae0f432.jpg";
+			"https://telegra.ph/file/7b2e3b0e08229c111311f.mp4";
 		if (!parsedArgs.joined) {
 			const commands = this.handler.commands.keys();
 			const categories: { [key: string]: ICommand[] } = {};
@@ -43,7 +43,11 @@ export default class Command extends BaseCommand {
 					categories[info.config.category].push(info);
 				}
 			}
-			let text = `${username},𝐈'𝐦 𝐓𝐞𝐱𝐚𝐬!\n𝐌𝐲 𝐏𝐫𝐞𝐟𝐢𝐱 " *${this.client.config.prefix}* "\n𝐆𝐫𝐨𝐮𝐩 𝐌𝐞𝐦𝐛𝐞𝐫: *@${user.split("@")[0]}*\n𝐘𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐜𝐨𝐮𝐧𝐭: ${memberCount}\n𝐘𝐨𝐮𝐫 𝐄𝐱𝐩: *${(await this.client.getUser(user)).Xp || 0}*\n\n`;
+			let text = `*Yes?* \n*What can I do for you*! \n*Group Member!* \n*@${
+				user.split("@")[0]
+			}*, *Exp:* *${(await this.client.getUser(user)).Xp || 0}*\n\n💡 Use my *Prefix:* " *${
+				this.client.config.prefix
+			}* "\n\n`;
 			const keys = Object.keys(categories);
 			for (const key of keys)
 				text += `*『 ${this.client.util.capitalize(
@@ -54,8 +58,10 @@ export default class Command extends BaseCommand {
 			return void this.client.sendMessage(
 				M.from,
 				{ url: chitoge },
-				MessageType.image,
+				MessageType.video,
 				{
+					quoted: M.WAMessage,
+					mimetype: Mimetype.gif,
 					caption: `${text} 📚 Use ${this.client.config.prefix}help <command_name> to view the full info.\n\n🚧 Eg: ${this.client.config.prefix}help waifu`,
 					contextInfo: { mentionedJid: [user] },
 				}
