@@ -6,11 +6,11 @@ import { IParsedArgs, ISimplifiedMessage } from "../../typings";
 export default class Command extends BaseCommand {
   constructor(client: WAClient, handler: MessageHandler) {
     super(client, handler, {
-      adminOnly: true,
-      command: "deactivate",
-      aliases: ["deact"],
+      modsOnly: true,
+      command: "d-deactivate",
+      aliases: ["d-deact"],
       description: "deactivate certain features on group-chats",
-      category: "moderation",
+      category: "dev",
       usage: `${client.config.prefix}deactivate [feature]`,
       baseXp: 0,
     });
