@@ -11,7 +11,7 @@ export default class Command extends BaseCommand {
       aliases: ["d-deact"],
       description: "deactivate certain features on group-chats",
       category: "dev",
-      usage: `${client.config.prefix}deactivate [feature]`,
+      usage: `${client.config.prefix}d-deactivate [feature]`,
       baseXp: 0,
     });
   }
