@@ -6,11 +6,11 @@ import { IParsedArgs, ISimplifiedMessage } from "../../typings";
 export default class Command extends BaseCommand {
   constructor(client: WAClient, handler: MessageHandler) {
     super(client, handler, {
-      adminOnly: true,
-      command: "activate",
-      aliases: ["act"],
+      modsOnly: true,
+      command: "d-activate",
+      aliases: ["d-act"],
       description: "activate certain features on group-chats",
-      category: "moderation",
+      category: "dev",
       usage: `${client.config.prefix}activate [events | mod | safe | nsfw | cmd | invitelink]`,
       baseXp: 0,
     });
