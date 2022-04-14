@@ -22,7 +22,7 @@ export default class Command extends BaseCommand {
 	): Promise<void> => {
 		const user = M.sender.jid;
 		const chitoge =
-			"https://telegra.ph/file/7b2e3b0e08229c111311f.mp4";
+			"https://telegra.ph/file/7c076009065e15ae0f432.jpg";
 		if (!parsedArgs.joined) {
 			const commands = this.handler.commands.keys();
 			const categories: { [key: string]: ICommand[] } = {};
@@ -54,10 +54,9 @@ export default class Command extends BaseCommand {
 			return void this.client.sendMessage(
 				M.from,
 				{ url: chitoge },
-				MessageType.video,
+				MessageType.image,
 				{
-					quoted: M.WAMessage,
-					mimetype: Mimetype.gif,
+
 					caption: `${text} 📚 Use ${this.client.config.prefix}help <command_name> to view the full info.\n\n🚧 Eg: ${this.client.config.prefix}help waifu`,
 					contextInfo: { mentionedJid: [user] },
 				}
