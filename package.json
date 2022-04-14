@@ -12,20 +12,20 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ShineiIchijo/Chitoge.git"
+        "url": "git+https://github.com/AliAryanTech/Texas-Bot.git"
     },
     "keywords": [
         "bot",
         "typescript",
         "whatsapp",
-        "chitoge"
+        "texas"
     ],
-    "author": "Synthesized Infinity & Shinei Ichijo",
+    "author": "Alι_Aryαɴ & Texαs",
     "license": "AGPL-3.0",
     "bugs": {
-        "url": "https://github.com/ShineiIchijo/Chitoge/issues"
+        "url": "https://github.com/AliAryanTech/Texas-Bot/issues"
     },
-    "homepage": "https://github.com/ShineiIchijo/Chitoge#readme",
+    "homepage": "https://github.com/AliAryanTech/Texas-Bot#readme",
     "devDependencies": {
         "@types/express": "^4.17.12",
         "@types/fs-extra": "^9.0.11",
